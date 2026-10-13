@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+dist/
+__pycache__/
+*.pyc
+
+backend/ml-service/data/
+
+# Local backups and notes
+*.bak
+frontend/CloudWiseLab-current.txt

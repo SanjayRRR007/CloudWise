@@ -1,0 +1,255 @@
+
+.cost-analytics {
+  width: 100%;
+  margin: 32px 0;
+  color: #172033;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.cost-analytics *,
+.cost-analytics *::before,
+.cost-analytics *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.cost-analytics h2 {
+  margin: 6px 0;
+  font-size: 25px;
+  color: #172033;
+}
+
+.cost-analytics h3 {
+  margin: 0 0 18px;
+  font-size: 17px;
+  color: #172033;
+}
+
+.cost-analytics p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.ca-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ca-kicker {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.ca-heading p {
+  margin: 7px 0;
+}
+
+.ca-demo-badge {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  color: #9a3412;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ca-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.ca-summary-card,
+.ca-chart-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+.ca-summary-card > span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.ca-summary-card > strong {
+  display: block;
+  color: #172033;
+  font-size: clamp(18px, 2vw, 25px);
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+.ca-summary-card small {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.ca-summary-card .ca-green {
+  color: #15803d;
+}
+
+.ca-chart-card {
+  margin-top: 16px;
+}
+
+.ca-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px 0;
+}
+
+.ca-chart-row {
+  display: grid;
+  grid-template-columns: 145px minmax(40px, 1fr) minmax(100px, auto);
+  align-items: center;
+  gap: 14px;
+}
+
+.ca-bar-label {
+  color: #475569;
+  font-size: 12px;
+}
+
+.ca-chart-row > strong {
+  text-align: right;
+  white-space: nowrap;
+  color: #172033;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ca-track {
+  height: 12px;
+  width: 100%;
+  background: #eaf0f7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ca-bar {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.25s ease;
+}
+
+.ca-current {
+  background: #2563eb;
+}
+
+.ca-optimised {
+  background: #16a34a;
+}
+
+.ca-chart-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.ca-note-dot {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #ea580c;
+}
+
+.ca-muted {
+  margin: -10px 0 22px;
+}
+
+.ca-resource-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(80px, 2fr) minmax(80px, auto);
+  align-items: center;
+  gap: 15px;
+  margin: 18px 0;
+}
+
+.ca-resource-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ca-resource-label strong {
+  font-size: 12px;
+  color: #172033;
+}
+
+.ca-resource-label span,
+.ca-resource-row > small {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.ca-share-track {
+  height: 9px;
+}
+
+.ca-share {
+  background: #6095f5;
+}
+
+.ca-resource-row > small {
+  text-align: right;
+}
+
+@media (max-width: 750px) {
+  .ca-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ca-heading {
+    flex-direction: column;
+  }
+
+  .ca-chart-row {
+    grid-template-columns: 1fr auto;
+    gap: 9px;
+  }
+
+  .ca-chart-row .ca-track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .ca-chart-row > strong {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .ca-resource-row {
+    grid-template-columns: minmax(90px, 1fr) minmax(70px, 1.3fr);
+    gap: 10px;
+  }
+
+  .ca-resource-row > small {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}
