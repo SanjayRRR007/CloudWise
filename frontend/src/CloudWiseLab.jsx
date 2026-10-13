@@ -5,8 +5,7 @@ import autoTable from "jspdf-autotable";
 import "./CloudWiseLab.css";
 import CostAnalytics from "./CostAnalytics";
 
-const API = "http://localhost:5000";
-
+const API = "https://cloudwise-chs3.onrender.com";
 const INITIAL_RESOURCES = [
   { name: "Web Server", type: "Compute", monthlyCost: 10000, utilization: 25 },
   { name: "Database", type: "Database", monthlyCost: 15000, utilization: 65 },

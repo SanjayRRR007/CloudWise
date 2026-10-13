@@ -2,8 +2,7 @@
 import { useEffect, useState } from 'react';
 import './Dashboard.css';
 
-const API_URL = 'http://localhost:5000';
-
+const API_URL = 'https://cloudwise-chs3.onrender.com';
 const resources = [
   { name: 'Storage', description: 'Example storage resources', count: 48, letter: 'S', type: 'storage' },
   { name: 'Compute', description: 'Example compute resources', count: 32, letter: 'C', type: 'compute' },
